@@ -4,9 +4,15 @@ function startClassification(){
 }
 
 function modelReady(){
-    classifier.classify( gotResult);
+    console.log("model is loaded");
+    classifier.classify(gotResult);
 }
 
-function gotResult( error , results){
-    console.log("Got Result")
+function gotResult(error,results){
+    if(error){
+    console.log(error);
+    }
+    else{
+        console.log(results);
+    }
 }
